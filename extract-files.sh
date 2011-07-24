@@ -18,39 +18,7 @@ DEVICE=inc
 
 mkdir -p ../../../vendor/htc/$DEVICE/proprietary
 
-adb pull /system/bin/akmd ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/bin/snd ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/bin/snd8k ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/bin/sound8k ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/bin/spkamp ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/bin/wifitools ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/etc/AdieHWCodecSetting.csv ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/etc/AudioBTID.csv ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/etc/TPA2018.csv ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/etc/WPDB.zip ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/etc/firmware/Incredible_C_20100310_VZW_Neo_324016_v4_PMIC.acdb ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/etc/firmware/Incredible_C_20100319_VZW_Neo_324016_v5_VZW.acdb ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/etc/firmware/Incredible_C_20100319_VZW_Neo_324016_v8_default.acdb ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/etc/firmware/Incredible_C_20100921_VZW_Neo_324016_v10_default.acdb ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/etc/firmware/default.acdb ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/etc/firmware/default_PMIC.acdb ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/etc/firmware/default_VZW.acdb ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/etc/firmware/yamato_pfp.fw ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/etc/firmware/yamato_pm4.fw ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/lib/egl/libEGL_adreno200.so ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/lib/egl/libGLESv1_CM_adreno200.so ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/lib/egl/libGLESv2_adreno200.so ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/lib/egl/libq3dtools_adreno200.so ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/lib/libOmxVdec.so ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/lib/libcamera.so ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/lib/libgsl.so ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/lib/libhtc_acoustic.so ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/lib/libhtc_ril.so ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/lib/liboemcamera.so ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/usr/keychars/incrediblec-keypad.kcm.bin ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/usr/keylayout/h2w_headset.kl ../../../vendor/htc/$DEVICE/proprietary
-adb pull /system/usr/keylayout/incrediblec-keypad.kl ../../../vendor/htc/$DEVICE/proprietary
-
+cp proprietary/* ../../../vendor/htc/$DEVICE/proprietary
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/htc/$DEVICE/$DEVICE-vendor-blobs.mk
 # Copyright (C) 2010 The Android Open Source Project
